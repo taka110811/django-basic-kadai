@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>商品詳細</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>商品名</th>
+        <th>価格</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ object.name }}</td>
+        <td>{{ object.price }} 円</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  {# 一覧に戻るリンク #}
+  <a href="{% url 'list' %}" class="btn btn-link">戻る</a>
+{% endblock %}
